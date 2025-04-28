@@ -138,18 +138,7 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
     background-color: white;
   }
 
-  /* Add a small hint that the card is interactive */
-  &::after {
-    content: "Hover for details";
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 0.7rem;
-    color: rgba(0, 0, 0, 0.5);
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 3;
-  }
+
 `;
 
 export default FeatureCard; 

@@ -10,38 +10,7 @@ import { PricingDemo } from "./components/pricing/pricing-demo";
 import { FaqDemo } from "./components/faq/faq-demo";
 import React, { useState, useEffect } from 'react';
 import WaitlistForm from './components/WaitlistForm';
-
-// Background Component that can be reused across sections
-const BackgroundGrid = () => {
-  const [dotStyles, setDotStyles] = useState<React.CSSProperties[]>([]);
-
-  useEffect(() => {
-    const styles = Array.from({ length: 30 }).map(() => ({
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      animation: `float ${3 + Math.random() * 2}s ease-in-out infinite`,
-    }));
-    setDotStyles(styles);
-  }, []);
-
-  return (
-    <>
-      <div className="absolute inset-0" style={{
-        backgroundImage: "linear-gradient(#00000008 1px, transparent 1px), linear-gradient(90deg, #00000008 1px, transparent 1px)",
-        backgroundSize: "16px 16px"
-      }} />
-      <div className="absolute inset-0">
-        {dotStyles.map((style, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-black/5 rounded-full"
-            style={style}
-          />
-        ))}
-      </div>
-    </>
-  );
-};
+import { BackgroundGrid } from './components/BackgroundGrid'; // Import from new location
 
 export default function Home() {
   const [showWaitlistForm, setShowWaitlistForm] = useState(false);
@@ -256,7 +225,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - Temporarily Commented Out
+      -----------------------------------------------------
       <section id="testimonials" className="py-20 bg-[#f0f0f0] relative overflow-hidden">
         <BackgroundGrid />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -272,7 +242,6 @@ export default function Home() {
               Join thousands of satisfied users who love Menu Decoder
             </p>
             
-            {/* 3D Testimonial Carousel */}
             <TestimonialCarousel testimonials={testimonials} />
             
             <p className="mt-6 text-gray-600 italic">
@@ -281,6 +250,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      ----------------------------------------------------- */}
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-[#f0f0f0] relative overflow-hidden">

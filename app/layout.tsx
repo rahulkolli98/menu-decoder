@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <StyledComponentsRegistry>
           <Navbar />
-          <main className="pt-8">
+          <main>
             {children}
           </main>
           <Footer />
