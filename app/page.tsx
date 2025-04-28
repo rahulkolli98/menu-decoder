@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image"; // Removed unused Image import
 import FeatureCard from "./components/FeatureCard";
-import StepCard from "./components/StepCard";
+// import StepCard from "./components/StepCard"; // Removed unused StepCard import
 import ProcessCard from "./components/ProcessCard";
 import GlassmorphismHero from "./components/GlassmorphismHero";
 import TestimonialCarousel from "./components/TestimonialCarousel";

@@ -39,39 +39,6 @@ const FaqHeader = ({ title }: { title: string }) => (
   </div>
 );
 
-// Background Effects Component
-const BackgroundEffects = () => (
-  <>
-    <div className="absolute inset-0">
-      {[...Array(30)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-2 h-2 bg-black/5 rounded-full"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            x: [0, Math.random() * 20 - 10, 0],
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 3 + Math.random() * 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      ))}
-    </div>
-    <div className="absolute inset-0" style={{
-      backgroundImage: "linear-gradient(#00000008 1px, transparent 1px), linear-gradient(90deg, #00000008 1px, transparent 1px)",
-      backgroundSize: "16px 16px"
-    }} />
-  </>
-);
-
 // FAQ Item Component
 const FaqItem = ({ item, index }: { item: FaqItem; index: number }) => {
   const [isOpen, setIsOpen] = useState(false);

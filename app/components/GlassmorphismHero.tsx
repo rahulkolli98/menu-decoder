@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 
 interface GlassmorphismHeroProps {
   title: string;
