@@ -81,12 +81,12 @@ export default function Navbar() {
           </nav>
           
           <div className="flex items-center">
-            <a 
+            <Link 
               href="/#get-started" 
               className="inline-flex items-center justify-center rounded-md bg-rose-500 px-5 py-2 text-sm font-bold text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.9)] hover:translate-y-[-2px] transition-all duration-200"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       </div>

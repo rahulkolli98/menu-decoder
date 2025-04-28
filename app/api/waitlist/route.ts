@@ -66,12 +66,14 @@ export async function POST(request: Request) {
     console.log(`Waitlist entry added: ${email}`, data); // Log success with optional returned data
     return NextResponse.json({ message: 'Successfully joined waitlist!' }, { status: 201 }); // 201 Created
 
-  } catch (error: any) {
+  } catch (error) {
      // Catch potential JSON parsing errors or other unexpected issues
     console.error('Waitlist API route error:', error);
      if (error instanceof SyntaxError) {
         return NextResponse.json({ message: 'Invalid request format.' }, { status: 400 });
      }
-    return NextResponse.json({ message: 'An unexpected server error occurred.' }, { status: 500 });
+     // Check if it's an error instance to safely access message
+     const message = error instanceof Error ? error.message : 'An unexpected server error occurred.';
+    return NextResponse.json({ message }, { status: 500 });
   }
 } 

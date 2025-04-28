@@ -5,10 +5,10 @@ import FeatureCard from "./components/FeatureCard";
 // import StepCard from "./components/StepCard"; // Removed unused StepCard import
 import ProcessCard from "./components/ProcessCard";
 import GlassmorphismHero from "./components/GlassmorphismHero";
-import TestimonialCarousel from "./components/TestimonialCarousel";
+// import TestimonialCarousel from "./components/TestimonialCarousel"; // Removed unused import
 import { PricingDemo } from "./components/pricing/pricing-demo";
 import { FaqDemo } from "./components/faq/faq-demo";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; // Removed unused useEffect
 import WaitlistForm from './components/WaitlistForm';
 import { BackgroundGrid } from './components/BackgroundGrid'; // Import from new location
 
@@ -27,79 +27,8 @@ export default function Home() {
     console.log("Waitlist form submitted successfully!");
   };
 
-  // Testimonial data with colors
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah J.",
-      role: "Food Explorer",
-      content: "Menu Decoder has completely changed how I dine out. No more guessing what dishes are or asking servers to explain things. Now I can confidently order in any restaurant!",
-      color: "142, 249, 252",
-    },
-    {
-      id: 2,
-      name: "Michael T.",
-      role: "Frequent Traveler",
-      content: "As someone who travels internationally for work, Menu Decoder is a lifesaver. I can understand menus in multiple languages and avoid ordering dishes I won't enjoy.",
-      color: "142, 252, 204",
-    },
-    {
-      id: 3,
-      name: "Lisa K.",
-      role: "Food Allergies",
-      content: "With food allergies, dining out can be stressful. Menu Decoder helps me identify potential allergens in dishes before ordering, giving me peace of mind.",
-      color: "142, 252, 157",
-    },
-    {
-      id: 4,
-      name: "David R.",
-      role: "Culinary Student",
-      content: "This app is an excellent learning tool. I'm expanding my culinary knowledge while exploring new restaurants. The detailed explanations of cooking techniques are fantastic!",
-      color: "215, 252, 142",
-    },
-    {
-      id: 5,
-      name: "Emma L.",
-      role: "Vegetarian Foodie",
-      content: "Menu Decoder makes it so much easier to find vegetarian options at any restaurant. No more awkward questions about ingredients - it's all in the app!",
-      color: "252, 252, 142",
-    },
-    {
-      id: 6,
-      name: "James W.",
-      role: "Fine Dining Enthusiast",
-      content: "I love exploring high-end restaurants, and Menu Decoder enhances the experience by helping me understand the complex techniques and ingredients used in fine dining.",
-      color: "252, 208, 142",
-    },
-    {
-      id: 7,
-      name: "Sofia C.",
-      role: "International Student",
-      content: "Being in a new country with unfamiliar food terms was challenging until I found Menu Decoder. Now I can enjoy local cuisine without feeling lost.",
-      color: "252, 142, 142",
-    },
-    {
-      id: 8,
-      name: "Thomas H.",
-      role: "Food Critic",
-      content: "Even as a food critic, I occasionally encounter terms I'm unfamiliar with. Menu Decoder is my secret weapon for staying knowledgeable in diverse culinary settings.",
-      color: "252, 142, 239",
-    },
-    {
-      id: 9,
-      name: "Olivia P.",
-      role: "Health-Conscious Diner",
-      content: "The nutritional insights from Menu Decoder help me make better food choices while still enjoying restaurant meals. It's perfect for maintaining my dietary goals.",
-      color: "204, 142, 252",
-    },
-    {
-      id: 10,
-      name: "Ryan B.",
-      role: "Tech Professional",
-      content: "The app's interface is so intuitive and the scanning feature works flawlessly. As a tech professional, I'm impressed with both the concept and execution.",
-      color: "142, 202, 252",
-    }
-  ];
+  // Removed unused testimonials constant
+  // const testimonials = [ ... ]; 
 
   return (
     <>
