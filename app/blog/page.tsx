@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Ensure this line is commented out or removed
 import { BackgroundGrid } from '../components/BackgroundGrid'; // Correct relative path
 import BlogCard from '../components/BlogCard'; // Component to be created
 

@@ -62,10 +62,11 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ onClose, onSubmitSuccess })
       //   onClose();
       // }, 3000); // Close after 3 seconds
 
-    } catch (err: any) {
+    } catch (err) {
       console.error("Submission error:", err);
-      // Display the error message from the API or the caught error
-      setError(err.message || "An unexpected error occurred. Please try again.");
+      // Ensure type check and correct message assignment
+      const message = err instanceof Error ? err.message : "An unexpected error occurred. Please try again.";
+      setError(message);
     } finally {
       setIsLoading(false); // Ensure loading is set to false
     }
@@ -92,7 +93,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ onClose, onSubmitSuccess })
         {success ? (
           <div className="text-center">
              <p className="text-green-700 bg-green-100 p-4 rounded-lg border-2 border-green-600 font-semibold mb-4 shadow-sm">
-                 Thanks for joining! We'll be in touch soon. 🎉
+                 Thanks for joining! We&apos;ll be in touch soon. 🎉 {/* Ensure apostrophe is escaped */}
             </p>
             <button
                  onClick={onClose}
